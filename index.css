@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+nav {
+    display: flex;
+    background-color: black;
+    color: white;
+    position: fixed;
+}
+
+p {
+    margin: 10px;
+    padding: 5px;
+}
+
+p:active {
+    color: orange;
+}
+
+h1 {
+    text-align: center;
+    padding: 25px;
+    padding-top: 50px;
+}
+
+div {
+    margin: 10px;
+}
+
+div>p {
+    font-size: large;
+    font-weight: 200;
+}
+
+span {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    float: right;
+    background-color: black;
+    color: aliceblue;
+}
+
+#share {
+    background-color: greenyellow;
+    display: inline;
+    padding: 10px;
+    position: fixed;
+    margin-left: 75%;
+    margin-top: 25%;
+}
+
+#share:active {
+    padding: 20px;
+    background-color: yellow;
+}
