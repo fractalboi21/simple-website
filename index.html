@@ -7,47 +7,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <pnk rel="manifest" href="manifest.json">
         <link rel="stylesheet" href="index.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
         <title>News feedz</title>
 
 </head>
 
 <body>
 
-    <nav>
-        <p>home</p>
-        <p><a href="./pages/news.html">news</a></p>
-        <p><a href="./pages/about.html">about</a></p>
-        <p><a href="./pages/help.html">help</a></p>
-        <p>contact</p>
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar scroll</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Link
+          </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Link</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
     </nav>
 
     <h1>Forcedtoexist became a multi-millionaire.</h1>
     <div>
-        <span>3-3-2022</span>
-        <div id="share">
-            share
-        </div>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo adipisci enim, quidem tenetur porro illum laboriosam eum quisquam quibusdam consequatur odit dolorem impedit, repellendus perferendis blanditiis officia nostrum repellat culpa. dolor sit amet
-            consectetur adipisicing elit. Asperiores suscipit qui sunt facere hic quis pariatur praesentium dolor perspiciatis. Repudiandae quasi eum ratione perspiciatis hic ipsum nostrum et a quam.</p>
+        <span class="badge rounded-pill bg-dark">3-3-2022</span>
 
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus possimus atque iste enim, numquam explicabo neque aliquid ipsam suscipit beatae necessitatibus architecto dolore omnis, minima doloremque, veritatis blanditiis temporibus eum.
-        </p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus possimus atque iste enim, numquam explicabo neque aliquid ipsam suscipit beatae necessitatibus architecto dolore omnis, minima doloremque, veritatis blanditiis temporibus eum.
-        </p>
+        <p class="fs-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ipsum fugiat sapiente. Mollitia, quidem? Obcaecati voluptates impedit dolore, dolorem voluptate architecto porro laborum perspiciatis quos molestiae quae consectetur ipsum saepe.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam earum sed maxime voluptatibus officiis fugiat aut reiciendis error eius asperiores saepe fuga tempora necessitatibus atque quod quasi, eaque veritatis ducimus. loru Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Voluptate magni at eligendi nesciunt esse nostrum quasi, excepturi facere ducimus vero veniam aspernatur. Hic error, inventore itaque a praesentium modi ullam. lorrem Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Nobis id ratione ipsam rerum fugiat cupiditate commodi. Sed accusantium aspernatur debitis ut est illum exercitationem, architecto explicabo officiis laboriosam laudantium eligendi?Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Nihil necessitatibus obcaecati corporis culpa iste tempore laudantium ipsam, animi earum totam sunt eum quo enim ut cupiditate autem consequuntur officia dolor?
 
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus possimus atque iste enim, numquam explicabo neque aliquid ipsam suscipit beatae necessitatibus architecto dolore omnis, minima doloremque, veritatis blanditiis temporibus eum.
         </p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus possimus atque iste enim, numquam explicabo neque aliquid ipsam suscipit beatae necessitatibus architecto dolore omnis, minima doloremque, veritatis blanditiis temporibus eum.
-        </p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus possimus atque iste enim, numquam explicabo neque aliquid ipsam suscipit beatae necessitatibus architecto dolore omnis, minima doloremque, veritatis blanditiis temporibus eum.
-        </p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus possimus atque iste enim, numquam explicabo neque aliquid ipsam suscipit beatae necessitatibus architecto dolore omnis, minima doloremque, veritatis blanditiis temporibus eum.
-        </p>
+        <p class="fs-6">or Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis id, quidem quas similique numquam aperiam placeat quam voluptatum maxime quasi! In molestiae quidem minima veniam exercitationem, consectetur consequuntur tempore quis.lore</p>
+
+
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+            </figcaption>
+        </figure>
+
+
 
 </body>
-
-</html>
 
 </html>
