@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <pnk rel="manifest" href="manifest.json">
         <link rel="stylesheet" href="index.css">
-        <title>News feed</title>
+        <title>News feedz</title>
 
 </head>
 
@@ -50,22 +50,20 @@
         <p class="result"></p>
         <button>share!</button>
 
-<script>
-    const shareData = {
-        title:"MDN",
-        text:"example description",
-        url: "https://www.github.com"
-    }
+        <script>
+            const shareData = {
+                title: "MDN",
+                text: "example description",
+                url: "https://www.github.com"
+            }
 
-    const btn = document.querySelector("button");
-    const resultPara = documen.querySelector(".result")
+            const btn = document.querySelector("button");
+            const resultPara = documen.querySelector(".result")
 
-    btn.addEventListener("click", ()=>{
-Navigator.share(shareData);
-});
-
-
-</script>
+            btn.addEventListener("click", () => {
+                Navigator.share(shareData);
+            });
+        </script>
 </body>
 
 </html>
