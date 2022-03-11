@@ -1,0 +1,88 @@
+<html>
+<head>
+<style>
+svg {
+   background-color:black;
+   }
+</style>
+</head>
+<body>
+
+<h1>My first SVG</h1>
+
+<svg width="500" height="500">
+  <circle id="circ" cx="0" cy="0" r="15" stroke="yellow" stroke-width="5" fill="orange" />
+</svg>
+<button id="btn">click me!</button>
+<p id="kb">keys pressed!</p>
+<script>
+const btn = document.querySelector("#btn");
+const kb = document.querySelector("#kb");
+const circ = document.querySelector("#circ");
+btn.addEventListener("click",({pointerId})=> {
+   
+console.log("helloworld!",pointerId);
+})
+
+self.addEventListener("keydown",({code})=>
+{
+   console.log(code)
+
+   switch(code) {
+      case "ArrowUp":
+      circ.cy.baseVal.value -= 5;
+      console.log(circ.cx.baseVal.value)
+      displayXY()
+      break;
+      
+      case "ArrowDown":
+      circ.cy.baseVal.value += 5;
+      console.log(circ.cy.baseVal.value)
+      displayXY()
+      break;
+      
+      case "ArrowLeft":
+      displayXY()
+      circ.cx.baseVal.value -= 5;
+      console.log(circ.cy.baseVal.value)
+      break;
+      
+     case "ArrowRight":
+      circ.cx.baseVal.value += 5;
+      console.log(circ.cy.baseVal.value)
+      displayXY()
+      break;
+      
+      case "KeyR":
+      circ.style.fill = "red";
+      break;
+      
+      case "KeyG":
+      circ.style.fill = "green";
+      break;
+      
+      case "KeyB":
+      circ.style.fill = "blue";
+      break;
+      
+      
+      }
+      
+   
+   
+}
+)
+
+
+
+console.log(circ)
+
+function displayXY() {
+   kb.innerText = `x:${circ.cx.baseVal.value} y:${circ.cy.baseVal.value}`;
+   }
+
+
+
+</script>
+</body>
+</html>
