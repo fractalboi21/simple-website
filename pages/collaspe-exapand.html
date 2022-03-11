@@ -1,0 +1,106 @@
+<html>
+<head>
+<style>
+.collapse {
+width:25px;
+height:25px;
+background-color:black;
+border-radius:100px;
+transition-delay:1000;
+
+}
+
+.collapse div {
+display:none;
+}
+
+.expand {
+width:50%;
+height:50%;
+background:orange;
+
+border-radius:50px;
+}
+
+.expand div{
+width:90px;
+height:90px;
+background:green;
+padding:15px;
+}
+
+p {
+width:50%;
+height:50%;
+background-color:yellow;
+}
+
+</style>
+
+</head>
+<body>
+<h1>html page</h1>
+<div id="bar" class="collapse">
+<div>hello world!
+
+</div>
+<input id="inpt" type="text"/>
+</div>
+<script>
+//const URL = "https://api.github.com/users/aakashbilly"
+//let response = await fetch(URL);
+//console.log(response)
+"use strict";
+
+(async ()=>{
+	const name = "helloworld"
+	const URL = `https://api.github.com/users/${name}`
+	let response = await fetch(URL);
+	let json = await response.json();
+	console.log(json);
+	return json
+	})
+	
+
+console.log(navigator.appVersion);
+let arr = [""]
+
+//self.addEventListener("click",(arg1)=>{console.log("mouse clicked!!",arg1)})
+
+
+self.addEventListener("keypress",(arg1)=>{
+console.clear();
+if(arg1.key==="Enter") {
+arr.push("\n")
+} else {
+arr.push(arg1.key)
+}
+
+
+console.log("key pressed!",arr.join(""));
+
+let logs = localStorage.getItem("log");
+localStorage.setItem("log",logs+arg1.key);
+
+})
+
+navigator.platform
+
+navigator.onLine
+
+self.addEventListener("close",(arg1)=>{alert(1);})
+
+// p tag behaviour
+let p = document.querySelector("#bar");
+p.addEventListener("click",()=>{
+if(p.className==="collapse") {
+p.className = "expand"
+} else {
+p.className = "collapse"
+}
+})
+
+
+</script>
+</body>
+</html>
