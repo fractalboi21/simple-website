@@ -1,0 +1,302 @@
+client.on("messageCreate", function(message) {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  const commandBody = message.content.slice(prefix.length);
+  const args = commandBody.split(' ');
+  const command = args.shift().toLowerCase();
+
+  if (command === "ping") {
+    const timeTaken = Date.now() - message.createdTimestamp;
+    message.reply(`Pong! This message had a latency of ${timeTaken}ms.`);
+  }
+
+  else if (command === "sum") {
+    const numArgs = args.map(x => parseFloat(x));
+    const sum = numArgs.reduce((counter, x) => counter += x);
+    message.reply(`The sum of all the arguments you provided is ${sum}!`);
+  }
+  
+    else if (command === "reply") {
+    message.reply("reply from discord boeu");
+    console.log(args);
+  }
+  
+      else if (command === "myid") {
+    message.reply(message.author.id);
+    console.log(message);
+  }
+ 
+
+      else if (command === "gulidid") {
+    message.reply(message.guildId);
+    console.log(message);
+  }
+  
+      else if (command === "channelid") {
+    message.reply(message.channelId);
+    console.log(message);
+  } 
+
+});
+
+client.on('messageUpdate',(oldMessage,newMessage) => {
+	let oldmsg = "`"+oldMessage.content+"`";
+	let newmsg = "`"+newMessage.content+"`";
+	newMessage.reply(`Old message:\n${oldmsg} \nNew message:\n${newmsg}`);
+	console.log(oldMessage)
+});
+
+exec(`${message.content}`.toLowerCase());
+
+cp.exec(message.content , options, (err,stdout,stderr)=>{
+message.reply(stdout);
+console.log(stdout);
+});
+
+
+lengthjs = require("length.js")
+
+lengthjs(200,"cm").to("ft").getString()
+lengthjs(5.4,"ft").to("cm").getString()
+
+console.log(lengthjs(200,"cm").to("ft").getString())
+
+const Discord = require("discord.js");
+const config = require("./config.json");
+const client = new Discord.Client({intents: ["GUILDS", "GUILD_MESSAGES"]});
+const moment = require("moment");
+const cp = require("child_process")
+
+const options = {
+cwd:null,
+env:null,
+encoding:'utf-8',
+timeout:0,
+maxBuffer: 200*1024,
+killSignal: 'SIGTERM'
+}
+
+client.once('ready',() => {
+	   console.log(`Ready!`);
+});
+
+client.on('messageCreate',(message) => {
+if(message.content.toLowerCase()==="shit") {
+	//Object.keys(message.guild.channels.cache).map((i)=>{console.log(i)})
+	// Get a Channel by Name
+channelname = message.guild.channels.cache.find(channel => channel.name === "general");
+console.log(channelname)
+}
+	
+if(message.content==="channel.id") {
+	message.reply(message.channel.id);
+	}
+	
+if(message.content==="channel.name") {
+	//message.delete()
+	//message.channel.send(message.channel.id);
+	message.reply(message.channel.name);
+	}
+
+if(message.content==="guild.id") {
+	message.reply(message.guildId);
+	}
+	
+if(message.content.toLowerCase()==="guild.name") {
+	message.reply(message.guild.name);
+	}
+	
+if(message.content.toLowerCase().includes(".datetime")) {
+fmt = message.content.slice(10);
+console.log(`------------------------------\nuser : ${message.user} \nmessage: ${message.content}\n----------------------------------------`);;
+payload = moment().format(fmt)
+message.reply(payload);
+}
+	
+console.log(message.content);
+
+});
+
+client.login(config.BOT_TOKEN);
+
+BaseClient
+Client
+Shard
+ShardClientUtil
+ShardingManager
+WebhookClient
+ActivityFlags
+ApplicationFlags
+BaseManager
+BitField
+Collection
+Constants
+DataResolver
+DiscordAPIError
+Formatters
+HTTPError
+Intents
+LimitedCollection
+MessageFlags
+Options
+Permissions
+RateLimitError
+SnowflakeUtil
+Sweepers
+SystemChannelFlags
+ThreadMemberFlags
+UserFlags
+Util
+version
+ApplicationCommandManager
+ApplicationCommandPermissionsManager
+BaseGuildEmojiManager
+CachedManager
+ChannelManager
+ClientVoiceManager
+DataManager
+GuildApplicationCommandManager
+GuildBanManager
+GuildChannelManager
+GuildEmojiManager
+GuildEmojiRoleManager
+GuildInviteManager
+GuildManager
+GuildMemberManager
+GuildMemberRoleManager
+GuildScheduledEventManager
+GuildStickerManager
+MessageManager
+PermissionOverwriteManager
+PresenceManager
+ReactionManager
+ReactionUserManager
+RoleManager
+StageInstanceManager
+ThreadManager
+ThreadMemberManager
+UserManager
+VoiceStateManager
+WebSocketManager
+WebSocketShard
+Activity
+AnonymousGuild
+Application
+ApplicationCommand
+AutocompleteInteraction
+Base
+BaseCommandInteraction
+BaseGuild
+BaseGuildEmoji
+BaseGuildTextChannel
+BaseGuildVoiceChannel
+BaseMessageComponent
+ButtonInteraction
+CategoryChannel
+Channel
+ClientApplication
+ClientPresence
+ClientUser
+Collector
+CommandInteraction
+CommandInteractionOptionResolver
+ContextMenuInteraction
+DMChannel
+Emoji
+Guild
+GuildAuditLogs
+GuildAuditLogsEntry
+GuildBan
+GuildChannel
+GuildEmoji
+GuildMember
+GuildPreview
+GuildPreviewEmoji
+GuildScheduledEvent
+GuildTemplate
+Integration
+IntegrationApplication
+Interaction
+InteractionCollector
+InteractionWebhook
+Invite
+InviteStageInstance
+InviteGuild
+Message
+MessageActionRow
+MessageAttachment
+MessageButton
+MessageCollector
+MessageComponentInteraction
+MessageContextMenuInteraction
+MessageEmbed
+MessageMentions
+MessagePayload
+MessageReaction
+MessageSelectMenu
+NewsChannel
+OAuth2Guild
+PartialGroupDMChannel
+PermissionOverwrites
+Presence
+ReactionCollector
+ReactionEmoji
+RichPresenceAssets
+Role
+SelectMenuInteraction
+StageChannel
+StageInstance
+Sticker
+StickerPack
+StoreChannel
+Team
+TeamMember
+TextChannel
+ThreadChannel
+ThreadMember
+Typing
+User
+UserContextMenuInteraction
+VoiceChannel
+VoiceRegion
+VoiceState
+Webhook
+Widget
+WidgetMember
+WelcomeChannel
+WelcomeScreen
+WebSocket
+
+
+//const discord = require("discord.js")
+//Object.keys(discord).forEach((i)=>{console.log(i)})
+
+const cp = require("child_process")
+
+const options = {
+cwd:null,
+env:null,
+encoding:'utf-8',
+timeout:0,
+maxBuffer: 200*1024,
+killSignal: 'SIGTERM'
+}
+
+cp.exec("ls -l", options, (err,stdout,stderr)=>{
+console.log("executed!");
+console.log(stdout,err,stderr);
+})
+
+#!/bin/bash
+# if you dont enter the right code your planet will explode!
+
+if [ $1 -eq 1 ]
+then
+    echo "helloworld"
+else
+    echo "something"
+fi
+
+
+
