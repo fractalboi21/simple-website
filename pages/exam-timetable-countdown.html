@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body>
+
+<p id="demo"></p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Table - February 2022</title> 
+	<style>
+		table {
+			border:1px solid #b3adad;
+			border-collapse:collapse;
+			padding:5px;
+		}
+		table th {
+			border:1px solid #b3adad;
+			padding:5px;
+			background: #f0f0f0;
+			color: #313030;
+		}
+		table td {
+			border:1px solid #b3adad;
+			text-align:center;
+			padding:5px;
+			background: #ffffff;
+			color: #313030;
+		}
+	</style>
+</head>
+<body>
+<h1>N Scheme</h1>
+<h3>Semester - III</h3>
+	<table>
+		<thead>
+			<tr>
+				<th>Date &amp; time</th>
+				<th>Time</th>
+				<th>subject code</th>
+				<th>subject</th>
+				<th>countdown</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>01-02-2022&nbsp;</td>
+				<td>&nbsp;10:00AM - 1:00PM</td>
+				<td>&nbsp;4052320</td>
+				<td>OPERATING SYSTEMS&nbsp;</td>
+				<td id="os">&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;04-02-2022</td>
+				<td>&nbsp;10:00AM - 1:00PM</td>
+				<td>4052310&nbsp;</td>
+				<td>BASICS OF ELECTRICAL AND ELECTRONICS ENGINEERING&nbsp;</td>
+				<td id="beee">&nbsp;</td>
+			</tr>
+			<tr>
+				<td>05-02-2022</td>
+				<td>&nbsp;10:00AM - 1:00PM</td>
+				<td>&nbsp;4052330</td>
+				<td>C PROGRAMMING AND DATA STRUCTURE&nbsp;</td>
+				<td id="c">&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
+
+<script>
+
+function updateTableCountdownRealtime(datetimeString,id) {
+// Set the date we're counting down to
+// datetimeString = "Jan 5, 2024 15:37:25" and id=os
+let countDownDate = new Date(datetimeString).getTime();
+
+// Update the count down every 1 second
+let x = setInterval(function() {
+
+  // Get today's date and time
+  let now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  let distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById(id).innerText = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById(id).innerHTML = "EXAM OVER";
+  }
+}, 1000);
+}
+// datetimeString = "Jan 5, 2024 15:37:25" and id=os
+updateTableCountdownRealtime("Feb 1, 2022 10:00:00","os");
+updateTableCountdownRealtime("Feb 4, 2022 10:00:00","beee");
+updateTableCountdownRealtime("Feb 5, 2022 10:00:00","c");
+
+</script>
+
+</body>
+</html>
